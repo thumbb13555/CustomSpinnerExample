@@ -69,13 +69,15 @@ public class MainActivity extends AppCompatActivity {
         }
         //getDropDownView為設置點開後的畫面
         @Override
-        public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        public View getDropDownView(int position, @Nullable View convertView, @NonNull
+                ViewGroup parent) {
             return createView(position, convertView, parent,true);
         }
 
         //因為兩個介面通常都長差不多...所以新增介面的我把它寫在一起，差別只在最後的true/false
         @SuppressLint("SetTextI18n")
-        private View createView(int position, View convertView, ViewGroup parent,Boolean ageDisplay){
+        private View createView(int position, View convertView
+                , ViewGroup parent,Boolean ageDisplay){
             convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.spinner_item, parent, false);
             TextView tvName = convertView.findViewById(R.id.textViewTitle);
